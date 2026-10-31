@@ -7,6 +7,12 @@ const filterToggle = document.getElementById('filter-toggle');
 const closeFilter = document.getElementById('close-filter');
 const productsContainer = document.getElementById('products-container');
 
+function formatSpillere(product) {
+    const range = product.spillereMin === product.spillereMax
+        ? product.spillereMin
+        : `${product.spillereMin}-${product.spillereMax}`;
+    return `${range.toLocaleString('da-DK')} spillere`;
+}
 
 function displayProducts(productsToDisplay) {
     productsContainer.innerHTML = '';
@@ -29,7 +35,7 @@ function displayProducts(productsToDisplay) {
                 <h3 class="product-title">${product.title}</h3>
                 <p class="product-description">${product.description}</p>
                 <div class="product-meta">
-                    <span class="product-price">${product.price.toLocaleString('da-DK')} DKK</span>
+                    <span class="product-spillere">${formatSpillere(product)}</span>
                     <span class="product-category">${product.category}</span>
                 </div>
                 <div class="product-rating">${ratingStars}</div>
@@ -47,10 +53,9 @@ const dialog = document.getElementById('product-dialog');
 function showProductDialog(productId) {
     const product = products.find(p => p.id === productId);
     document.getElementById('dialog-image').src = product.image;
-    document.getElementById('dialog-image').alt = product.title;
     document.getElementById('dialog-title').textContent = product.title;
     document.getElementById('dialog-description').textContent = product.description;
-    document.getElementById('dialog-price').textContent = product.price.toLocaleString('da-DK') + ' DKK';
+    document.getElementById('dialog-spillere').textContent = formatSpillere(product);
     document.getElementById('dialog-category').textContent = product.category;
 
     const ratingStars = '★'.repeat(product.rating) + '☆'.repeat(5 - product.rating);

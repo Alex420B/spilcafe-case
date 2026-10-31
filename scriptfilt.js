@@ -17,8 +17,8 @@ function filtrerProdukter() {
 
     const categories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(cb => cb.value);
     const colors = Array.from(document.querySelectorAll('input[name="color"]:checked')).map(cb => cb.value);
-    const minPrice = parseFloat(document.getElementById('min-price').value);
-    const maxPrice = parseFloat(document.getElementById('max-price').value);
+    const minSpillere = parseFloat(document.getElementById('min-spillere').value);
+    const maxSpillere = parseFloat(document.getElementById('max-spillere').value);
     const rating = document.querySelector('input[name="rating"]:checked')?.value || null;
 
     if (categories.length > 0) {
@@ -33,15 +33,15 @@ function filtrerProdukter() {
         );
     }
 
-    if (!isNaN(minPrice)) {
+    if (!isNaN(minSpillere)) {
         filteredProducts = filteredProducts.filter(product =>
-            product.price >= minPrice
+            product.spillereMax >= minSpillere
         );
     }
 
-    if (!isNaN(maxPrice)) {
+    if (!isNaN(maxSpillere)) {
         filteredProducts = filteredProducts.filter(product =>
-            product.price <= maxPrice
+            product.spillereMin <= maxSpillere
         );
     }
 
@@ -59,11 +59,11 @@ function filtrerProdukter() {
     }
 
     if (sorterEfter && sorterEfter === "pris-stigende") {
-        filteredProducts.sort((a, b) => a.price - b.price);
+        filteredProducts.sort((a, b) => a.spillereMin - b.spillereMin);
     }
 
     if (sorterEfter && sorterEfter === "pris-faldende") {
-        filteredProducts.sort((a, b) => b.price - a.price);
+        filteredProducts.sort((a, b) => b.spillereMin - a.spillereMin);
     }
 
     displayProducts(filteredProducts);
@@ -77,5 +77,4 @@ document.getElementById('apply-filters').addEventListener('click', function () {
     filtrerProdukter();
     closeFilterPanel();
 });
-
 
