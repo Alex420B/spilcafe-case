@@ -10,7 +10,7 @@ const products = [
         category: "Bluff",
         rating: 5,
         color: "sort",
-        image: "https://via.placeholder.com/300x200?text=Smartphone+Pro+X"
+        image: "https://via.placeholder.com/300x200?text=Varulv"
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const products = [
         category: "Kommunikation",
         rating: 4,
         color: "hvid",
-        image: "https://via.placeholder.com/300x200?text=Hovedtelefoner"
+        image: "https://via.placeholder.com/300x200?text=Hint"
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const products = [
         category: "Observation",
         rating: 4,
         color: "blå",
-        image: "https://via.placeholder.com/300x200?text=Bomuld+T-Shirt"
+        image: "https://via.placeholder.com/300x200?text=Dobble"
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ const products = [
         category: "Strategi",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Designerstol"
+        image: "https://via.placeholder.com/300x200?text=Uno"
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ const products = [
         category: "Observation",
         rating: 4,
         color: "sort",
-        image: "https://via.placeholder.com/300x200?text=JavaScript+Bog"
+        image: "https://via.placeholder.com/300x200?text=Vildkatten"
     },
     {
         id: 6,
@@ -65,7 +65,7 @@ const products = [
         category: "Bluff",
         rating: 5,
         color: "sort",
-        image: "https://via.placeholder.com/300x200?text=Smartwatch+Series+7"
+        image: "https://via.placeholder.com/300x200?text=Det+Dårlige+Selskab"
     },
     {
         id: 7,
@@ -76,7 +76,7 @@ const products = [
         category: "Observation",
         rating: 3,
         color: "blå",
-        image: "https://via.placeholder.com/300x200?text=Jeans+Bukser"
+        image: "https://via.placeholder.com/300x200?text=Hitster"
     },
     {
         id: 8,
@@ -87,7 +87,7 @@ const products = [
         category: "Balance",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Spisebord"
+        image: "https://via.placeholder.com/300x200?text=Twister"
     },
     {
         id: 9,
@@ -98,7 +98,7 @@ const products = [
         category: "Kommunikation",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Spisebord"
+        image: "https://via.placeholder.com/300x200?text=Codenames"
     },
     {
         id: 10,
@@ -109,7 +109,7 @@ const products = [
         category: "Balance",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Spisebord"
+        image: "https://via.placeholder.com/300x200?text=Klodsmajor"
     }, 
     {
         id: 11,
@@ -120,7 +120,7 @@ const products = [
         category: "Gætteri",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Spisebord"
+        image: "https://via.placeholder.com/300x200?text=Hvem+er+Hvem?"
     },
      {
         id: 12,
