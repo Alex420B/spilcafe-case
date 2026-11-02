@@ -98,3 +98,7 @@ document.getElementById('apply-filters').addEventListener('click', function () {
     filtrerProdukter();
     closeFilterPanel();
 });
+
+document.querySelectorAll('.tid-input').forEach(input => {
+    input.addEventListener('input', filtrerProdukter);
+});
