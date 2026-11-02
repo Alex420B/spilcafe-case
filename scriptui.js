@@ -14,6 +14,13 @@ function formatSpillere(product) {
     return `${range.toLocaleString('da-DK')} spillere`;
 }
 
+function formatTid(product) {
+    const range = product.tidMin === product.tidMax
+        ? product.tidMin
+        : `${product.tidMin}-${product.tidMax}`;
+    return `${range.toLocaleString('da-DK')} min`;
+}
+
 function displayProducts(productsToDisplay) {
     productsContainer.innerHTML = '';
 
@@ -36,6 +43,7 @@ function displayProducts(productsToDisplay) {
                 <p class="product-description">${product.description}</p>
                 <div class="product-meta">
                     <span class="product-spillere">${formatSpillere(product)}</span>
+                    <span class="product-tid">${formatTid(product)}</span>
                     <span class="product-category">${product.category}</span>
                 </div>
                 <div class="product-rating">${ratingStars}</div>
@@ -57,6 +65,7 @@ function showProductDialog(productId) {
     document.getElementById('dialog-description').textContent = product.description;
     document.getElementById('dialog-spillere').textContent = formatSpillere(product);
     document.getElementById('dialog-category').textContent = product.category;
+    document.getElementById('dialog-tid').textContent = `${product.tidMin}-${product.tidMax} min`;
 
     const ratingStars = '★'.repeat(product.rating) + '☆'.repeat(5 - product.rating);
     document.getElementById('dialog-rating').textContent = ratingStars;

@@ -19,6 +19,8 @@ function filtrerProdukter() {
     const colors = Array.from(document.querySelectorAll('input[name="color"]:checked')).map(cb => cb.value);
     const minSpillere = parseFloat(document.getElementById('min-spillere').value);
     const maxSpillere = parseFloat(document.getElementById('max-spillere').value);
+    const minTid = parseFloat(document.getElementById('min-tid').value);
+    const maxTid = parseFloat(document.getElementById('max-tid').value);
     const rating = document.querySelector('input[name="rating"]:checked')?.value || null;
 
     if (categories.length > 0) {
@@ -45,6 +47,18 @@ function filtrerProdukter() {
         );
     }
 
+    if (!isNaN(minTid)) {
+        filteredProducts = filteredProducts.filter(product =>
+            product.tidMax >= minTid
+        );
+    }
+
+    if (!isNaN(maxTid)) {
+        filteredProducts = filteredProducts.filter(product =>
+            product.tidMin <= maxTid
+        );
+    }
+
     if (rating !== null) {
         filteredProducts = filteredProducts.filter(product =>
             product.rating >= rating
@@ -58,14 +72,21 @@ function filtrerProdukter() {
         filteredProducts.sort((a, b) => b.rating - a.rating);
     }
 
-    if (sorterEfter && sorterEfter === "pris-stigende") {
+    if (sorterEfter && sorterEfter === "spillere-stigende") {
         filteredProducts.sort((a, b) => a.spillereMin - b.spillereMin);
     }
 
-    if (sorterEfter && sorterEfter === "pris-faldende") {
+    if (sorterEfter && sorterEfter === "spillere-faldende") {
         filteredProducts.sort((a, b) => b.spillereMin - a.spillereMin);
     }
 
+    if (sorterEfter === "tid-stigende") {
+        filteredProducts.sort((a, b) => a.tidMin - b.tidMin);
+    }
+
+    if (sorterEfter === "tid-faldende") {
+        filteredProducts.sort((a, b) => b.tidMax - a.tidMax);
+    }
     displayProducts(filteredProducts);
 };
 
@@ -77,4 +98,3 @@ document.getElementById('apply-filters').addEventListener('click', function () {
     filtrerProdukter();
     closeFilterPanel();
 });
-

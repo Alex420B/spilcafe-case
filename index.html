@@ -21,8 +21,10 @@
                 <select id="predefined-search" class="predefined-select">
                     <option value="">---- Sorter efter ----</option>
                     <option value="populaere">Mest populære</option>
-                    <option value="Spillere-stigende">Spillere: Lav til høj</option>
-                    <option value="Spillere-faldende">Spillere: Høj til lav</option>
+                    <option value="spillere-stigende">Spillere: Lav til høj</option>
+                    <option value="spillere-faldende">Spillere: Høj til lav</option>
+                    <option value="tid-faldende">Tid: Høj til lav</option>
+                    <option value="tid-stigende">Tid: Lav til høj</option>
                 </select>
 
                 <button id="filter-toggle" class="filter-button">
@@ -67,6 +69,15 @@
                             <input type="number" id="min-spillere" placeholder="Min spillere" class="spillere-input">
                             <span class="spillere-separator">-</span>
                             <input type="number" id="max-spillere" placeholder="Max spillere" class="spillere-input">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Tid interval</label>
+                        <div class="tid-range">
+                            <input type="number" id="min-tid" placeholder="Min tid" class="tid-input">
+                            <span class="tid-separator">-</span>
+                            <input type="number" id="max-tid" placeholder="Max tid" class="tid-input">
                         </div>
                     </div>
 
@@ -123,7 +134,8 @@
         </main>
 
         <footer>
-            <p>&copy; 2026 Produkt Katalog</p>
+            <p>&copy; 2026 Spilleriget</p>
+            <p id="footer-info"></p>
         </footer>
     </div>
 
@@ -135,6 +147,7 @@
             <div class="product-meta">
                 <span id="dialog-spillere" class="product-spillere"></span>
                 <span id="dialog-category" class="product-category"></span>
+                <span id="dialog-tid" class="product-tid"></span>
             </div>
             <div id="dialog-rating" class="product-rating"></div>
             <menu class="dialog-actions">
