@@ -12,7 +12,7 @@ const products = [
         category: "Bluff",
         rating: 5,
         color: "sort",
-        image: "https://via.placeholder.com/300x200?text=Varulv"
+        image: "img/varulv.svg"
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const products = [
         category: "Kommunikation",
         rating: 4,
         color: "hvid",
-        image: "https://via.placeholder.com/300x200?text=Hint"
+        image: "img/hint.svg"
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ const products = [
         category: "Observation",
         rating: 4,
         color: "blå",
-        image: "https://via.placeholder.com/300x200?text=Dobble"
+        image: "img/dobble.svg"
     },
     {
         id: 4,
@@ -51,7 +51,7 @@ const products = [
         category: "Strategi",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Uno"
+        image: "img/uno.svg"
     },
     {
         id: 5,
@@ -64,7 +64,7 @@ const products = [
         category: "Observation",
         rating: 4,
         color: "sort",
-        image: "https://via.placeholder.com/300x200?text=Vildkatten"
+        image: "img/vildkatten.svg"
     },
     {
         id: 6,
@@ -77,7 +77,7 @@ const products = [
         category: "Bluff",
         rating: 5,
         color: "sort",
-        image: "https://via.placeholder.com/300x200?text=Det+Dårlige+Selskab"
+        image: "img/det-darlige-selskab.svg"
     },
     {
         id: 7,
@@ -90,7 +90,7 @@ const products = [
         category: "Observation",
         rating: 3,
         color: "blå",
-        image: "https://via.placeholder.com/300x200?text=Hitster"
+        image: "img/hitster.svg"
     },
     {
         id: 8,
@@ -103,7 +103,7 @@ const products = [
         category: "Balance",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Twister"
+        image: "img/twister.svg"
     },
     {
         id: 9,
@@ -116,7 +116,7 @@ const products = [
         category: "Kommunikation",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Codenames"
+        image: "img/codenames.svg"
     },
     {
         id: 10,
@@ -129,7 +129,7 @@ const products = [
         category: "Balance",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Klodsmajor"
+        image: "img/klods-major.svg"
     }, 
     {
         id: 11,
@@ -142,12 +142,12 @@ const products = [
         category: "Gætteri",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Hvem+er+Hvem?"
+        image: "img/hvem-er-hvem.svg"
     },
      {
         id: 12,
-        title: "Uno",
-        description: "Spil Uno med dine venner og familie.",
+        title: "ludo",
+        description: "Spil ludo med dine venner og familie.",
         spillereMin: 2,
         spillereMax: 10,
         tidMin: 15,
@@ -155,6 +155,6 @@ const products = [
         category: "Strategi",
         rating: 5,
         color: "brun",
-        image: "https://via.placeholder.com/300x200?text=Uno"
+        image: "img/ludo.svg"
     }
 ];
