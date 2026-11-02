@@ -349,6 +349,39 @@ header h1 {
     color: var(--primary-color);
 }
 
+.product-spillere{
+    display:flex;
+    align-items:center;
+    height: 20px;
+    font-size: 0.9rem;
+    color: var(--white);
+    background: linear-gradient( var(--farve-grad-1), var(--farve-grad-2));
+    border-radius: var(--border-radius);
+    padding: 2px 6px;
+}
+
+.product-tid{
+    display:flex;
+    align-items:center;
+    height: 20px;
+    font-size: 0.9rem;
+    color: var(--white);
+    background: linear-gradient( var(--farve-grad-1), var(--farve-grad-2));
+    border-radius: var(--border-radius);
+    padding: 2px 6px;
+}
+
+.product-category {
+    display:flex;
+    align-items:center;
+    height: 20px;
+    font-size: 0.9rem;
+    color: var(--white);
+    background: linear-gradient( var(--farve-grad-1), var(--farve-grad-2));
+    border-radius: var(--border-radius);
+    padding: 2px 6px;
+}
+
 .product-description {
     color: var(--dark-gray);
     font-size: 0.9rem;
@@ -363,19 +396,7 @@ header h1 {
     margin-bottom: 15px;
 }
 
-.product-price {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--accent-color);
-}
 
-.product-category {
-    font-size: 0.85rem;
-    color: var(--dark-gray);
-    background-color: var(--light-gray);
-    padding: 4px 10px;
-    border-radius: 20px;
-}
 
 .product-rating {
     color: #f39c12;
@@ -392,6 +413,8 @@ header h1 {
     cursor: pointer;
     transition: var(--transition);
     font-weight: 600;
+    position: relative;
+    bottom: 2%;
 }
 
 .product-button:hover {
@@ -428,6 +451,7 @@ dialog::backdrop {
     padding: 0;
     margin-top: 1rem;
 }
+
 
 
 /* Responsive design */

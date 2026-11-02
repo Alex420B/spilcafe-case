@@ -39,13 +39,14 @@ function displayProducts(productsToDisplay) {
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.title}" class="product-image">
             <div class="product-info">
-                <h3 class="product-title">${product.title}</h3>
-                <p class="product-description">${product.description}</p>
+               
                 <div class="product-meta">
                     <span class="product-spillere">${formatSpillere(product)}</span>
                     <span class="product-tid">${formatTid(product)}</span>
                     <span class="product-category">${product.category}</span>
                 </div>
+                 <h3 class="product-title">${product.title}</h3>
+                <p class="product-description">${product.description}</p>
                 <div class="product-rating">${ratingStars}</div>
                 <button class="product-button" onclick="showProductDialog(${product.id})">Vis</button>
             </div>
