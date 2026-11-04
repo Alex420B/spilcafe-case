@@ -112,3 +112,48 @@ window.addEventListener('keydown', (e) => {
 window.addEventListener('DOMContentLoaded', () => {
     displayProducts(products);
 });
+
+
+// swipe func
+let timerInterval;
+let seconds = 0;
+
+const checkInBtn = document.getElementById("checkInBtn");
+const checkOutBtn = document.getElementById("checkOutBtn");
+const timerDisplay = document.getElementById("timer");
+
+// Formatér tiden som mm:ss
+function formatTime(sec) {
+  const m = String(Math.floor(sec / 60)).padStart(2, "0");
+  const s = String(sec % 60).padStart(2, "0");
+  return `${m}:${s}`;
+}
+
+// Start timer
+function startTimer() {
+  timerInterval = setInterval(() => {
+    seconds++;
+    timerDisplay.textContent = "Timer: " + formatTime(seconds);
+  }, 1000);
+}
+
+// Stop timer
+function stopTimer() {
+  clearInterval(timerInterval);
+  seconds = 0;
+  timerDisplay.textContent = "Timer: 00:00";
+}
+
+// Check ind
+checkInBtn.addEventListener("click", () => {
+  checkInBtn.disabled = true;
+  checkOutBtn.disabled = false;
+  startTimer();
+});
+
+// Check ud
+checkOutBtn.addEventListener("click", () => {
+  checkOutBtn.disabled = true;
+  checkInBtn.disabled = false;
+  stopTimer();
+});
