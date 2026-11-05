@@ -11,7 +11,11 @@
 <body>
     <div class="container">
         <header>
+            <img id="logo-image" src="img/logo.png" alt="Logo" class="logo">
             <h1 id="web-title">Spilleriget</h1>
+            <a href="profil.html" class="profile-button" aria-label="Gå til profil">
+                <img id="profile-image1" src="img/profile.jpg" alt="Profil" class="profile-image">
+            </a>
         </header>
 
         <main>
@@ -122,14 +126,14 @@
 
     <dialog id="product-dialog">
         <article class="dialog-content">
-            <img id="dialog-image" src="" alt="" class="product-image">
+            <img id="dialog-image" src="img/" alt="" class="product-image">
             
             <div class="product-meta">
                 <span id="dialog-spillere" class="product-spillere"></span>
                 <span id="dialog-category" class="product-category"></span>
                 <span id="dialog-tid" class="product-tid"></span>
             </div>
-            <h2 id="dialog-title"></h2>
+            
             <p id="dialog-description"></p>
             <div id="dialog-rating" class="product-rating"></div>
             <div id="app">
@@ -144,9 +148,9 @@
   <!-- Timer visning -->
   <p id="timer">Timer: 00:00</p>
 </div>
-            <menu class="dialog-actions">
+            <div class="dialog-actions">
                 <button id="dialog-close" value="cancel">Luk</button>
-            </menu>
+            </div>
         </article>
     </dialog>
 
