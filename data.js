@@ -121,7 +121,7 @@ const products = [
     {
         id: 10,
         title: "Klodsmajor",
-        description: "Ét forkert træk kan være nok. Fjern forsigtigt en klods, stable tårnet højere, og håb at konstruktionen holder. Spændingen vokser med hver runde, for jo højere tårnet bliver, desto større bliver faldet.",
+        description: "Ét forkert træk kan være nok. Fjern forsigtigt en klods, stabel tårnet højere og håb at konstruktionen holder. Spændingen vokser med hver runde, for jo højere tårnet bliver, desto større bliver faldet.",
         spillereMin: 1,
         spillereMax: 6,
         tidMin: 10,

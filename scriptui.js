@@ -131,6 +131,9 @@ function formatTime(sec) {
 
 // Start timer
 function startTimer() {
+  clearInterval(timerInterval);
+  seconds = 0;
+  timerDisplay.textContent = "Timer: " + formatTime(seconds);
   timerInterval = setInterval(() => {
     seconds++;
     timerDisplay.textContent = "Timer: " + formatTime(seconds);
@@ -140,8 +143,7 @@ function startTimer() {
 // Stop timer
 function stopTimer() {
   clearInterval(timerInterval);
-  seconds = 0;
-  timerDisplay.textContent = "Timer: 00:00";
+  timerInterval = null;
 }
 
 // Check ind
