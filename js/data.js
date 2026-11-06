@@ -12,7 +12,7 @@ const products = [
         category: "Bluff",
         rating: 5,
         color: "sort",
-        image: "img/varulv.svg"
+        image: "img//werewulf.svg"
     },
     {
         id: 2,
