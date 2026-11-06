@@ -1,32 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Min profil</title>
     <link rel="stylesheet" href="profil.css">
 </head>
 <body>
-<header>
-    <img id="logo-image" src="img/logo.png" alt="Logo" class="logo">
-    <h1 id="web-title">Min profil</h1>
-    <a href="index.html" class="back-button" aria-label="Gå til profil">
-        <img id="profile-image1" src="img/tilbage.jpg" alt="tilbage" class="profile-image">
-    </a>
-</header>    
-<main>
-    <div class="profile-container">
-        <img id="profile-image" src="img/profile.jpg" alt="Profilbillede" class="profile-image-large">
-        <h2>Velkommen til din profil!</h2>
-        <p>Her kan du se dine gemte produkter og administrere dine indstillinger.</p>
-        <div class="saved-products">
-            <h3>Dine gemte spil:</h3>
-        </div>
-</main>
+    <div class="profile-page">
+        <!-- Simple image placeholders keep both header icons easy to replace later. -->
+        <header class="profile-header">
+            <a class="header-icon" href="index.html" aria-label="Tilbage">
+                <img src="img/placeholder-back.svg" alt="">
+            </a>
+            <h1>Min Profil</h1>
+            <img class="header-icon settings-icon" src="img/placeholder-settings.svg" alt="Indstillinger">
+        </header>
 
+        <main>
+            <section class="profile-summary" aria-label="Profil">
+                <img class="profile-picture" src="img/placeholder-profile.svg" alt="Profilbillede">
+                <h2>Asty</h2>
+            </section>
 
+            <!-- The two activity boxes mirror the stacked cards in the reference image. -->
+           <section class="activity-cards" aria-label="Spilaktivitet">
+                <article class="activity-card">
+                    <span class="activity-symbol heart" aria-hidden="true">♥</span>
+                    <div>
+                        <p class="card-label">Favoritter</p>
+                        <p class="card-value">0 spil</p>
+                    </div>
+                </article>
+                <article class="activity-card">
+                    <span class="activity-symbol clock" aria-hidden="true">◷</span>
+                    <div>
+                        <p class="card-label">Senest spillede</p>
+                        <p class="card-value">1 spil</p>
+                    </div>
+                </article>
+            </section>
 
-
-
+            <!-- basisk side som gerne vil have siden til at "huske" hvilke spil som man kan lide -->
+            <section class="liked-games" aria-labelledby="liked-games-title">
+                <h2 id="liked-games-title">Spil du kan lide</h2>
+                <div class="games-list">
+                    <article class="game-card">
+                        <img src="img/codenames.svg" alt="">
+                        <h3>Codenames</h3>
+                    </article>
+                    <article class="game-card">
+                        <img  src="img/hitster.svg" alt="">
+                        <h3>Hitster</h3>
+                    </article>
+                    <article class="game-card">
+                        <img src="img/dobble.svg" alt="">
+                        <h3>Dobble</h3>
+                    </article>
+                    <article class="game-card">
+                        <img src="img/uno.svg" alt="">
+                        <h3>UNO</h3>
+                    </article>
+                    <article class="game-card">
+                        <img src="img/Varulv.svg" alt="">
+                        <h3>Varulv</h3>
+                    </article>
+                    <article class="game-card">
+                        <img src="img/ludo.svg" alt="">
+                        <h3>Ludo</h3>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
