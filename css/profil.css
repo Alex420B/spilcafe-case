@@ -104,12 +104,12 @@ body {
     line-height: 1;
 }
 
-.activity-symbol.heart {
-    color: #e81768;
+.activity-symbol.clock {
+    object-fit: contain;
 }
 
-.activity-symbol.clock {
-    font-size: 48px;
+.activity-symbol.heart {
+    color: #e81768;
 }
 
 .card-label {
